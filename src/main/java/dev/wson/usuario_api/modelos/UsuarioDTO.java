@@ -13,4 +13,15 @@ public class UsuarioDTO {
     private String email;
     private String telefone;
     private LocalDate dataCadastro;
+
+    public static UsuarioDTO converterParaUsuarioDTO(Usuario usuario) {
+        UsuarioDTO usuarioDTO = new UsuarioDTO();
+        usuarioDTO.setNome(usuario.getNome());
+        usuarioDTO.setEndereco(usuario.getEndereco());
+        usuarioDTO.setCpf(usuario.getCpf());
+        usuarioDTO.setEmail(usuario.getEmail());
+        usuarioDTO.setTelefone(usuario.getTelefone());
+        usuarioDTO.setDataCadastro(usuario.getDataCadastro());
+        return usuarioDTO;
+    }
 }

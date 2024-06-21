@@ -4,18 +4,23 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDate;
 
-@Entity
 @Data
+@Entity
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(nullable = false)
     private String nome;
+    @Column(nullable = false)
     private String cpf;
+    @Column(nullable = false)
     private String endereco;
+    @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
     private String telefone;
-    @Column(name = "data_cadastro")
+    @Column(name = "data_cadastro", nullable = false)
     private LocalDate dataCadastro;
 
     public static Usuario converterParaUsuario(UsuarioDTO usuarioDTO) {
