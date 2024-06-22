@@ -4,8 +4,8 @@ import lombok.Data;
 import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 
-@Component
 @Data
+@Component
 public class UsuarioDTO {
     private String nome;
     private String cpf;
