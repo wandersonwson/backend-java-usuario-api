@@ -50,7 +50,7 @@ public class UsuarioService {
         if (usuario.isEmpty()) {
             return false;
         }
-        usuarioRepository.delete(usuario.get())
+        usuarioRepository.delete(usuario.get());
         return true;
     }
 }
