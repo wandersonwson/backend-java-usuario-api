@@ -25,7 +25,7 @@ public class UsuarioController {
     public UsuarioDTO buscarPorId(@PathVariable long id) {
         return usuarioService.buscarPorId(id);
     }
-    @GetMapping("/{cpf}")
+    @GetMapping("/busca/{cpf}")
     public UsuarioDTO buscarPorCpf(@PathVariable String cpf) {
         return usuarioService.buscarPorCpf(cpf);
     }

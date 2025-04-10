@@ -14,6 +14,9 @@ public class UsuarioDTO {
     private String telefone;
     private LocalDate dataCadastro;
 
+    public UsuarioDTO() {
+        this.dataCadastro = LocalDate.now();
+    }
     public static UsuarioDTO converterParaUsuarioDTO(Usuario usuario) {
         UsuarioDTO usuarioDTO = new UsuarioDTO();
         usuarioDTO.setNome(usuario.getNome());
